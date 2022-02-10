@@ -1,0 +1,58 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app{
+  height: 100%;
+  width: 100%;
+}
+
+.container{
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color:#eaac8b ;
+}
+
+.quote{
+  margin:10px 30px;
+  padding: 25px;
+  border: 1px solid #b56576;
+  color: #fed9b7;
+  background-color: #e56b6f;
+  width: 20rem;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.quote:hover{
+  transform: scale(1.1);
+}
+
+.quote-border{
+  border-left-width: 10px;
+}
+
+.quoted::before{
+  content: "\201c";
+  font-size: 100px;
+  color: #fed9b7;
+  display: block;
+  margin-bottom: -40px;
+  margin-top: -20px;
+}
+
+.quote-text{
+  font-style: italic;
+  font-size: 1.15;
+  line-height: 1.5;
+}
+
+.quote-author{
+  font-weight: bold;
+  font-style: normal;
+  text-align: right;
+}
