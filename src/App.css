@@ -56,3 +56,35 @@
   font-style: normal;
   text-align: right;
 }
+
+a{
+  text-decoration: none;
+}
+
+/* single quote */
+
+.single-quote{
+  height: 100vh;
+  width: 100vw;
+  background-color:#eaac8b ;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-quote-img{
+  width: 200px;
+  margin-bottom: 1rem;
+}
+
+.single-quote-text{
+  font-style: italic;
+  font-size: 1.9;
+  line-height: 1.5;
+}
+
+.single-quote-age{
+  font-weight: normal;
+}

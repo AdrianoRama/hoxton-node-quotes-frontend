@@ -1,8 +1,22 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import Quotes from './components/Quotes'
+import { Routes, Route, Link } from "react-router-dom"
+import SingleQuote from './components/SingleQuote'
+
+export type Quote = {
+  id: number
+  author: string
+  quote: string
+  image: string
+  age: string
+}
 
 function App() {
   const [quotes, setQuotes] = useState<Quote[]>([])
+  const [clickedQuote, setClickedQuote] = useState<Quote[]>([])
+
+  console.log(clickedQuote)
 
   useEffect(() => {
     fetch('http://localhost:4000/quotes')
@@ -10,27 +24,12 @@ function App() {
       .then(quotesFromServer => setQuotes(quotesFromServer))
   }, [])
 
-  console.log(quotes)
-
-  type Quote = {
-    id: number
-    author: string
-    quote: string
-  }
-
   return (
     <div className="App">
-      <div className="container">
-        {quotes.map(quote => {
-          return (
-
-            <div className="quote quote-border quoted">
-              <p className='quote-text'>{quote.quote}</p>
-              <p className='quote-text quote-author'>{quote.author}</p>
-            </div>
-          )
-        })}
-      </div>
+      <Routes>
+        <Route path="/" element={<Quotes quotes={quotes} setClickedQuote={setClickedQuote} />} />
+        <Route path="/:id" element={<SingleQuote clickedQuote={clickedQuote} />} />
+      </Routes>
     </div>
   )
 }
