@@ -15,7 +15,7 @@ export type Quote = {
 
 function App() {
   const [quotes, setQuotes] = useState<Quote[]>([])
-  const [clickedQuote, setClickedQuote] = useState<Quote[]>([])
+  const [clickedQuote, setClickedQuote] = useState<Quote>()
 
   console.log(quotes)
 
@@ -30,7 +30,7 @@ function App() {
       <Link to={'/home'}> <h1 className="add-new-quote">ADD A NEW QUOTE</h1></Link>
       <Routes>
         <Route path="/" element={<Quotes quotes={quotes} setClickedQuote={setClickedQuote} />} />
-        <Route path="/:id" element={<SingleQuote clickedQuote={clickedQuote} />} />
+        <Route path="/:id" element={<SingleQuote clickedQuote={clickedQuote} quotes={quotes} setQuotes={setQuotes} />} />
         <Route path="/home" element={<NewQuote quotes={quotes} setQuotes={setQuotes} />} />
       </Routes>
     </div>
