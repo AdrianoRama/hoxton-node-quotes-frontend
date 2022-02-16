@@ -97,6 +97,14 @@ a{
   width: 100vw;
 }
 
+.delete-quote{
+  padding: .5rem;
+  background-color: #e56b6f;
+  border-radius: .3rem;
+  color: white;
+  margin: 1rem;
+}
+
 /* form */
 
 .form-container{
@@ -142,4 +150,8 @@ textarea {
 
 textarea::placeholder{
   color: white;
+}
+
+.edit-quote{
+  text-align: center;
 }
