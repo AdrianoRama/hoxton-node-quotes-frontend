@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { Quote } from "../App"
 
 
@@ -10,6 +10,8 @@ type Props = {
 export default function Quotes({ quotes, setClickedQuote }: Props) {
     return (
         <div className="container">
+
+
             {quotes.map(quote => {
                 return (
                     <Link onClick={() => { setClickedQuote(quote) }} to={`/${quote.id}`}>

@@ -10,6 +10,7 @@
 }
 
 .container{
+  height: 100vh;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -87,4 +88,58 @@ a{
 
 .single-quote-age{
   font-weight: normal;
+}
+
+.add-new-quote{
+  text-align: center;
+  background-color: #e56b6f ;
+  color: #eaac8b ;
+  width: 100vw;
+}
+
+/* form */
+
+.form-container{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaac8b ;
+}
+
+.quote-form{
+  display: flex;
+  flex-direction: column;
+ width: 20rem;
+}
+
+.quote-form input{
+  padding: .5rem;
+  margin: 1rem;
+  background-color: #e56b6f;
+}
+
+.quote-form input::placeholder{
+  color: white;
+}
+
+.quote-btn{
+  padding: .5rem;
+  background-color: #e56b6f;
+  border-radius: .3rem;
+  color: white;
+  margin: 1rem;
+}
+
+textarea {
+  padding: 10px;
+  max-width: 100%;
+  line-height: 1.5;
+  border-radius: 5px;
+  background-color: #e56b6f ;
+}
+
+textarea::placeholder{
+  color: white;
 }
